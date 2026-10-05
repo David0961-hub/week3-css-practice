@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13 — Challenging</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Упражнение 13: Transitions & Transform</h1>
+        <nav><a href="../index.html">← На главную</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Описание задачи</h2>
+            <p>Интерактивная карточка с плавным масштабированием при наведении курсора.</p>
+            <h2>Результат</h2>
+            <div class="demo-box">
+                <div style="width: 120px; padding: 15px; background: var(--primary-color); color: white; text-align: center; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                    Наведи на меня
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer><p>&copy; 2026 David Yuhta</p></footer>
+</body>
+</html>

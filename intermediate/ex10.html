@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10 — Intermediate</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Упражнение 10: Стилизация форм</h1>
+        <nav><a href="../index.html">← На главную</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Описание задачи</h2>
+            <p>Оформление полей ввода и кнопок с подсвечиванием состояния :focus.</p>
+            <h2>Результат</h2>
+            <div class="demo-box">
+                <form style="display: flex; flex-direction: column; gap: 10px; max-width: 300px;" onsubmit="return false;">
+                    <input type="text" placeholder="Ваше имя" style="padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <button type="submit" style="padding: 8px; background: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">Отправить</button>
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer><p>&copy; 2026 David Yuhta</p></footer>
+</body>
+</html>

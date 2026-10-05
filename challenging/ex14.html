@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 14 — Challenging</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Упражнение 14: CSS Анимация (@keyframes)</h1>
+        <nav><a href="../index.html">← На главную</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Описание задачи</h2>
+            <p>Создание бесконечной пульсирующей точки статуса с использованием ключевых кадров.</p>
+            <h2>Результат</h2>
+            <div class="demo-box">
+                <style>
+                    @keyframes pulse {
+                        0% { opacity: 0.3; transform: scale(0.9); }
+                        50% { opacity: 1; transform: scale(1.1); }
+                        100% { opacity: 0.3; transform: scale(0.9); }
+                    }
+                    .pulse-dot {
+                        width: 16px; height: 16px; background: red; border-radius: 50%;
+                        animation: pulse 1.5s infinite ease-in-out;
+                    }
+                </style>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="pulse-dot"></div>
+                    <span>Запись в реальном времени...</span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer><p>&copy; 2026 David Yuhta</p></footer>
+</body>
+</html>

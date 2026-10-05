@@ -1,0 +1,125 @@
+/* ==========================================================================
+   1. BASE & RESET STYLES
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #f4f6f8;
+    --text-color: #1a1a1a;
+    --card-bg: #ffffff;
+    --primary-color: #0056b3;
+    --primary-hover: #003d80;
+    --border-color: #cccccc;
+}
+
+/* Dark Mode Toggle via System Settings */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --card-bg: #1e1e1e;
+        --primary-color: #4da6ff;
+        --primary-hover: #80c1ff;
+        --border-color: #333333;
+    }
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+/* Accessibility: Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* ==========================================================================
+   2. LAYOUT & NAVIGATION
+   ========================================================================== */
+header, nav, main, footer {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+nav a, section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover, section a:hover, nav a:focus, section a:focus {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+section {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   3. EXERCISES DEMO STYLES (EX1 - EX15)
+   ========================================================================== */
+.demo-box {
+    border: 2px dashed var(--primary-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--card-bg);
+}
+
+/* ---- Exercise 8: Flexbox Layout ---- */
+.ex8-flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* ---- Exercise 12: CSS Grid ---- */
+.ex12-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE / MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
